@@ -27,7 +27,8 @@ You can directly input `options`
 options = {
     :from=>"Invoiced, Inc.", 
     :to=>"Parag", 
-    :logo=>"https://invoiced.com/img/logo-invoice.png", :number=>1,
+    :logo=>"https://invoiced.com/img/logo-invoice.png", 
+    :number=>1,
     :items=>[
         {
             :name=>"Starter plan", 
