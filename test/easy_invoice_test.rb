@@ -8,6 +8,13 @@ class EasyInvoiceTest < Minitest::Test
     @ei = EasyInvoice::Invoice.new(items: [@item], template: @template)
   end
 
+  def test_options
+    ei = EasyInvoice::Invoice.new(options: {})
+    refute ei.pdf
+    ei.generate_pdf
+    assert ei.pdf
+  end
+
   def test_generate_pdf
     refute @ei.pdf
     @ei.generate_pdf

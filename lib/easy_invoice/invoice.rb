@@ -44,8 +44,10 @@ module EasyInvoice
 
       payload[:items] = self.items.map { |item| item.attributes}
 
-      template_attributes = self.template.attributes
-      payload.merge(template_attributes)
+      unless self.template.nil?
+        template_attributes = self.template.attributes
+        payload.merge(template_attributes)
+      end
 
       #Add any extra options
       payload.merge(self.options)
