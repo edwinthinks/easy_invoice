@@ -50,7 +50,7 @@ module EasyInvoice
       end
 
       #Add any extra options
-      payload.merge(self.options)
+      payload = payload.merge(self.options)
 
       payload.to_json
     end
